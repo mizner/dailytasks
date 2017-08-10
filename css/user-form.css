@@ -1,0 +1,280 @@
+/*
+hr.wp-header-end {
+  height: 110vh;
+  min-height: 750px;
+}
+
+#dailyTasks .acf-label {
+  display: none;
+}
+
+#dailyTaskss {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 90%;
+  height: 90vh;
+  min-height: 700px;
+  border: 1px dotted gray;
+  overflow: scroll;
+}
+*/
+/*
+#fieldset-billing,
+#fieldset-shipping {
+  display: none;
+}
+*/
+
+.yoast-settings {
+  display: none;
+}
+
+/* Daily Task */
+.daily-task-table-top-left {
+  font-weight: 900;
+}
+
+.daily-task-table-column-row {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 3px;
+  width: 80px;
+  height: 20px;
+  line-height: 1em;
+}
+
+.daily-task-table-column-row span:before {
+  font-family: dashicons;
+  content: "\f335";
+}
+
+.daily-task-table-date {
+  background: #333;
+  color: white;
+  border-right: 1px solid white;
+}
+
+.daily-task-table {
+  font-size: 14px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.break-line {
+  flex: 1 100%;
+  margin-bottom: 1em;
+}
+
+#dailyTasks {
+  position: relative;
+  padding-top: 3em !important;
+  display: block;
+}
+
+#dailyTasks td.acf-label {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+// Messy Hover Effect
+.daily-task-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.daily-task-table-text {
+  display: none;
+  position: absolute;
+  background: #ffffd4;
+  color: #333;
+  width: 200px;
+  min-height: 50px;
+  max-height: 150px;
+  overflow: scroll;
+  z-index: 999;
+  opacity: .9;
+  text-align: left;
+  padding: 1em;
+  left: 100%;
+  top: 0;
+}
+
+.daily-task-checker-true:hover .daily-task-table-text {
+  display: block;
+}
+
+.daily-task-checker-true {
+  position: relative;
+}
+
+.daily-task-text-true:after {
+  content: '*';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+form.task-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid gray;
+  margin-bottom: .5em;
+}
+
+form.task-item > * {
+  flex: 1 auto;
+}
+
+.task-first-header h3 {
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  font-size: 1em;
+}
+
+form.task-item input[type=checkbox] {
+  /*  transform: scale(2);*/
+}
+
+form.task-item input[type="text"] {
+  margin-left: 10px;
+  min-width: 300px;
+}
+
+span.task-title {
+  padding-left: 10px;
+  font-weight: 900;
+  max-width: 210px;
+  min-width: 210px;
+  overflow: scroll;
+  font-size: .8em;
+}
+
+.optional-note {
+  display: none;
+}
+
+.task-first-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-first-header > * {
+  flex: 1;
+}
+
+.task-first-header-col {
+  max-width: 230px;
+  min-width: 230px;
+}
+
+/* .squaredTwo */
+.squaredTwo {
+  width: 28px;
+  max-width: 28px;
+  height: 28px;
+  position: relative;
+  background: #fcfff4;
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.squaredTwo label {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  background: #93191c;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+
+.squaredTwo label:after {
+  content: '';
+  width: 13px;
+  height: 7px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+.squaredTwo input[type=checkbox]:checked + label {
+  background: green;
+}
+
+.squaredTwo label:hover::after {
+  opacity: 0.3;
+}
+
+.squaredTwo input[type=checkbox] {
+  visibility: hidden;
+}
+
+.squaredTwo input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+/* end .squaredTwo */
+
+.task-item button {
+  transition-delay: .3s;
+  transition: 400ms ease opacity;
+  opacity: 0;
+}
+
+.task-item.modified button {
+  background: #93191c;
+  opacity: 1;
+
+}
+
+.task-item button {
+  margin-left: 1em;
+  background: green;
+  color: white;
+  max-width: 70px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.task-name > * {
+  font-size: 0.7em;
+  text-align: left;
+}
+
+.task-name .daily-task-table-column-row {
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+}
+
+.task-name .daily-task-table-column-row:hover:after {
+  content: attr(data-content);
+  overflow: scroll;
+  background: yellow;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100px;
+  width: 100%;
+  padding-top: 3px;
+  padding-left: 3px;
+}
+
+.task-name .daily-task-table-column-row:nth-child(1):hover {
+  overflow: visible;
+  background: transparent;
+  position: inherit;
+  z-index: 999;
+  height: inherit;
+}
